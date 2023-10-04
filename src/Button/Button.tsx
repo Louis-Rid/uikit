@@ -15,6 +15,18 @@ interface ButtonProps {
    */
   size?: 'small' | 'medium' | 'large';
   /**
+   * if the button has an icon. optionel
+   */
+  hasIcon?: boolean;
+  /**
+   * Position of icon optionel
+   */
+  iconPos?: "start" | "end";
+  /**
+   * Position of icon optionel
+   */
+  icon?: string;
+  /**
    * Button content. required
    */
   label: string;
@@ -30,8 +42,11 @@ interface ButtonProps {
 export const Button = ({
   primary = false,
   size = 'medium',
-  backgroundColor,
+  backgroundColor = "green",
   label,
+  hasIcon,
+  iconPos,
+  icon,
   ...props
 }: ButtonProps) => {
   const mode: string = primary ? 'button--primary' : 'button--secondary';
@@ -40,10 +55,13 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={classes}
       {...props}
     >
-      {label}
+      <span className={classes}>
+        <span></span>
+        {label}
+      </span>
+      
     </button>
   );
 };
