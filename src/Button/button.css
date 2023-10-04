@@ -4,7 +4,8 @@
   border: 0;
   border-radius: 3em;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   line-height: 1;
 }
 .button--primary {
@@ -39,5 +40,9 @@
 
 .button--white {
   background: white;
+}
+
+.icon--wrapper {
+  margin-right: 10px;
 }
 

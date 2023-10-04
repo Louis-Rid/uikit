@@ -1,6 +1,36 @@
 import React from 'react';
 import './button.css';
+import '../assets/iconComponents/index';
+import * as IconsLibrary from '../assets/iconComponents/index';
+type Icon =
+| "AddToPlaylist"
+| "AddToQueue"
+| "ConnectToADevice"
+| "Download"
+| "FullScreen"
+| "GoToRadio"
+| "HideSong"
+| "Like"
+| "Lyrics"
+| "Next"
+| "Pause"
+| "Previous"
+| "Queue"
+| "Repeat"
+| "ReportAbuse"
+| "Share"
+| "Shuffle"
+| "SleepTimer"
+| "SongCredits"
+| "ViewAlbum"
+| "ViewArtist"
+| "Volume"
+;
 
+interface IconProps {
+  iconHeight: number;
+  iconWidth: number
+}
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?. optionel
@@ -15,17 +45,21 @@ interface ButtonProps {
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * if the button has an icon. optionel
+   * if the button has an icon. required
    */
-  hasIcon?: boolean;
+  hasIcon: boolean;
   /**
-   * Position of icon optionel
+   * Position of icon. optionel
    */
   iconPos?: "start" | "end";
   /**
-   * Position of icon optionel
+   * Position of icon. optionel
    */
-  icon?: string;
+  iconSize?: 16 | 21 | 32 | 56;
+  /**
+   * Icon symobol. optionel
+   */
+  iconName?: Icon;
   /**
    * Button content. required
    */
@@ -44,21 +78,22 @@ export const Button = ({
   size = 'medium',
   backgroundColor = "green",
   label,
-  hasIcon,
-  iconPos,
-  icon,
+  hasIcon = false,
+  iconPos = "start",
+  iconName = "Download",
+  iconSize = 16,
   ...props
 }: ButtonProps) => {
   const mode: string = primary ? 'button--primary' : 'button--secondary';
   const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, mode].join(' '); 
-
+  var IconComponent = iconName && IconsLibrary[iconName] as React.FC<IconProps>;
   return (
     <button
       type="button"
       {...props}
     >
       <span className={classes}>
-        <span></span>
+        <span className="icon--wrapper">{hasIcon && <IconComponent iconHeight={iconSize} iconWidth={iconSize}/>}</span>
         {label}
       </span>
       
