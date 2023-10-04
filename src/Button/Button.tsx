@@ -3,23 +3,23 @@ import './button.css';
 
 interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
+   * Is this the principal call to action on the page?. optionel
    */
   primary?: boolean;
   /**
-   * What background color to use
+   * What background color to use. optionel
    */
   backgroundColor?: "white" | "grey" | "green";
   /**
-   * How large should the button be?
+   * How large should the button be? optionel
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * Button contents
+   * Button content. required
    */
   label: string;
   /**
-   * Optional click handler
+   * Optional click handler. optionel
    */
   onClick?: () => void;
 }
@@ -35,12 +35,12 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const mode: string = primary ? 'button--primary' : 'button--secondary';
-  const classes: string[] = ['button', `button--${size}`, `button--${backgroundColor}`, mode]; 
+  const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, mode].join(' '); 
 
   return (
     <button
       type="button"
-      className={classes.join(' ')}
+      className={classes}
       {...props}
     >
       {label}
