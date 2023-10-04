@@ -34,12 +34,13 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'button--primary' : 'button--secondary';
+  const mode: string = primary ? 'button--primary' : 'button--secondary';
+  const classes: string[] = ['button', `button--${size}`, `button--${backgroundColor}`, mode]; 
 
   return (
     <button
       type="button"
-      className={['button', `button--${size}, button--${backgroundColor}`, mode].join(' ')}
+      className={classes.join(' ')}
       {...props}
     >
       {label}
