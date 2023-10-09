@@ -59,7 +59,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const mode: string = primary ? 'button--primary' : 'button--secondary';
-  const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, mode].join(' '); 
+  const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, `button--${iconPos}`, mode].join(' '); 
   var IconComponent = iconName && IconsLibrary[iconName] as React.FC<IconProps>;
 
   // Sets Icon size based on button size
