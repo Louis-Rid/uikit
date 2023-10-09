@@ -42,7 +42,7 @@ interface ButtonProps {
   /**
    * Optional click handler. optionel
    */
-  onClick?: () => void;
+  handleClick?: () => void;
 }
 
 /**
@@ -56,6 +56,7 @@ export const Button = ({
   hasIcon = false,
   iconPos = "start",
   iconName = "Download",
+  handleClick,
   ...props
 }: ButtonProps) => {
   const mode: string = primary ? 'button--primary' : 'button--secondary';
@@ -81,6 +82,7 @@ export const Button = ({
   return (
     <button
       type="button"
+      onClick={handleClick}
       {...props}
     >
       <span className={classes}>
