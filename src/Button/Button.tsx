@@ -12,10 +12,6 @@ interface IconProps {
 }
 interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?. optionel
-   */
-  primary?: boolean;
-  /**
    * What background color to use. optionel
    */
   backgroundColor?: "white" | "grey" | "green";
@@ -49,7 +45,6 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
   size = 'md',
   backgroundColor = "green",
   label,
@@ -59,8 +54,7 @@ export const Button = ({
   handleClick,
   ...props
 }: ButtonProps) => {
-  const mode: string = primary ? 'button--primary' : 'button--secondary';
-  const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, `button--${iconPos}`, mode].join(' '); 
+  const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, `button--${iconPos}`].join(' '); 
   var IconComponent = iconName && IconsLibrary[iconName] as React.FC<IconProps>;
 
   // Sets Icon size based on button size

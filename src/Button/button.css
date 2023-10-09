@@ -13,15 +13,7 @@ button {
   align-items: center;
   line-height: 1;
 }
-.button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
-.button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
+
 .button--sm {
   font-size: .875rem;
   padding: 10px 16px;
