@@ -8,8 +8,7 @@ type Icon =
 ;
 
 interface IconProps {
-  iconHeight: number;
-  iconWidth: number
+  dimensions: number;
 }
 interface ButtonProps {
   /**
@@ -23,7 +22,7 @@ interface ButtonProps {
   /**
    * How large should the button be? optionel
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: "sm" | "md" | "lg" | "xl";
   /**
    * if the button has an icon. required
    */
@@ -32,10 +31,6 @@ interface ButtonProps {
    * Position of icon. optionel
    */
   iconPos?: "start" | "end";
-  /**
-   * Position of icon. optionel
-   */
-  iconSize?: 16 | 21 | 32 | 56;
   /**
    * Icon symobol. optionel
    */
@@ -55,25 +50,41 @@ interface ButtonProps {
  */
 export const Button = ({
   primary = false,
-  size = 'medium',
+  size = 'md',
   backgroundColor = "green",
   label,
   hasIcon = false,
   iconPos = "start",
   iconName = "Download",
-  iconSize = 16,
   ...props
 }: ButtonProps) => {
   const mode: string = primary ? 'button--primary' : 'button--secondary';
   const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, mode].join(' '); 
   var IconComponent = iconName && IconsLibrary[iconName] as React.FC<IconProps>;
+
+  // Sets Icon size based on button size
+  var iconSize;
+  switch (size) {
+    case "sm":
+      iconSize = 16;
+      break;
+    case "md":
+      iconSize = 24;
+      break;
+    case "lg":
+      iconSize = 32;
+      break;
+    case "xl":
+      iconSize = 40;
+      break;
+  }
   return (
     <button
       type="button"
       {...props}
     >
       <span className={classes}>
-        <span className={`icon--wrapper ${!hasIcon ? "icon--hide" : ""}`}>{hasIcon && <IconComponent iconHeight={iconSize} iconWidth={iconSize}/>}</span>
+        <span className={`icon--wrapper ${!hasIcon ? "icon--hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>
         {label}
       </span>
       

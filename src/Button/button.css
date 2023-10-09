@@ -22,17 +22,22 @@ button {
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
-.button--small {
-  font-size: 12px;
+.button--sm {
+  font-size: .875rem;
   padding: 10px 16px;
 }
-.button--medium {
-  font-size: 14px;
+.button--md {
+  font-size: 1rem;
   padding: 11px 20px;
 }
-.button--large {
-  font-size: 16px;
+.button--lg {
+  font-size: 1.125rem;
   padding: 12px 24px;
+}
+
+.button--xl {
+  font-size: 1.25rem;
+  padding: 13px 28px;
 }
 
 .button--green {
