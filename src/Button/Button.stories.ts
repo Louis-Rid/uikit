@@ -23,31 +23,30 @@ export const Primary: Story = {
   args: {
     label: 'Button',
     backgroundColor: "green",
+    fontColor: "white",
     hasIcon: false,
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    ...Primary.args,
     backgroundColor: "grey",
-    hasIcon: false,
   },
 };
 
 export const Large: Story = {
   args: {
+    ...Primary.args,
     size: 'lg',
-    label: 'Button',
     backgroundColor: "white",
-    hasIcon: false,
+    fontColor: "black"
   },
 };
 
 export const Small: Story = {
   args: {
+    ...Primary.args,
     size: 'sm',
-    label: 'Button',
-    hasIcon: false,
   },
 };
