@@ -9,12 +9,16 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    hasIcon: {control: "boolean"},
+    iconName: {control: "select", if: {arg: "hasIcon"}},
+    iconPos: {control: "select", if: { arg: "hasIcon"}}
+  }
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
     primary: true,
@@ -34,7 +38,7 @@ export const Secondary: Story = {
 
 export const Large: Story = {
   args: {
-    size: 'large',
+    size: 'lg',
     label: 'Button',
     backgroundColor: "white",
     hasIcon: false,
@@ -43,7 +47,7 @@ export const Large: Story = {
 
 export const Small: Story = {
   args: {
-    size: 'small',
+    size: 'sm',
     label: 'Button',
     hasIcon: false,
   },
