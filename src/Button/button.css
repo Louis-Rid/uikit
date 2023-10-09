@@ -32,6 +32,18 @@ button {
   padding: 13px 28px;
 }
 
+.button--font-black {
+  color: #121212;
+}
+
+.button--font-white {
+  color: #f5f5f5;
+}
+
+.button--font-green {
+  color: #20d760;
+}
+
 .button--green {
   background: #20d760;
 }
@@ -41,7 +53,8 @@ button {
 }
 
 .button--white {
-  background: white;
+  background: #f5f5f5;
+  border: 1px solid #121212;
 }
 
 .button--start {

@@ -16,6 +16,10 @@ interface ButtonProps {
    */
   backgroundColor?: "white" | "grey" | "green";
   /**
+   * What background color to use. optionel
+   */
+  fontColor?: "white" | "black" | "green";
+  /**
    * How large should the button be? optionel
    */
   size?: "sm" | "md" | "lg" | "xl";
@@ -47,6 +51,7 @@ interface ButtonProps {
 export const Button = ({
   size = 'md',
   backgroundColor = "green",
+  fontColor = "black",
   label,
   hasIcon = false,
   iconPos = "start",
@@ -54,7 +59,7 @@ export const Button = ({
   handleClick,
   ...props
 }: ButtonProps) => {
-  const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, `button--${iconPos}`].join(' '); 
+  const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, `button--font-${fontColor}`, `button--${iconPos}`].join(' '); 
   var IconComponent = iconName && IconsLibrary[iconName] as React.FC<IconProps>;
 
   // Sets Icon size based on button size
