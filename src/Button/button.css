@@ -51,3 +51,7 @@ button {
   margin-right: 10px;
 }
 
+.icon--hide {
+  display: none;
+}
+

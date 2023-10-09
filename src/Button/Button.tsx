@@ -3,28 +3,8 @@ import './button.css';
 import '../assets/iconComponents/index';
 import * as IconsLibrary from '../assets/iconComponents/index';
 type Icon =
-| "AddToPlaylist"
-| "AddToQueue"
-| "ConnectToADevice"
 | "Download"
-| "FullScreen"
-| "GoToRadio"
-| "HideSong"
-| "Like"
-| "Lyrics"
-| "Next"
-| "Pause"
-| "Previous"
-| "Queue"
-| "Repeat"
-| "ReportAbuse"
-| "Share"
-| "Shuffle"
-| "SleepTimer"
-| "SongCredits"
-| "ViewAlbum"
-| "ViewArtist"
-| "Volume"
+| "Play"
 ;
 
 interface IconProps {
@@ -93,7 +73,7 @@ export const Button = ({
       {...props}
     >
       <span className={classes}>
-        <span className="icon--wrapper">{hasIcon && <IconComponent iconHeight={iconSize} iconWidth={iconSize}/>}</span>
+        <span className={`icon--wrapper ${!hasIcon ? "icon--hide" : ""}`}>{hasIcon && <IconComponent iconHeight={iconSize} iconWidth={iconSize}/>}</span>
         {label}
       </span>
       
