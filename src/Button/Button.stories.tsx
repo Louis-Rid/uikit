@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, StoryFn } from '@storybook/react';
 
 import { Button } from './Button';
 
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
   parameters: {
@@ -13,8 +13,15 @@ const meta = {
     hasIcon: {control: "boolean"},
     iconName: {control: "select", if: {arg: "hasIcon"}},
     iconPos: {control: "select", if: { arg: "hasIcon"}}
-  }
-} satisfies Meta<typeof Button>;
+  },
+  decorators: [
+    (Story: StoryFn) => (
+      <div style={{ margin: '3em' }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
