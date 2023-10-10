@@ -36,9 +36,9 @@ interface ButtonProps {
    */
   iconName?: Icon;
   /**
-   * Button content. required
+   * Button content. Optionel
    */
-  label: string;
+  label?: string;
   /**
    * Click handler. Optionel
    */
@@ -61,7 +61,14 @@ export const Button = ({
 }: ButtonProps) => {
 
   // Classes for the span element inside the button
-  const classes: string = ['button', `button--${size}`, `button--${backgroundColor}`, `button--font-${fontColor}`, `button--${iconPos}`].join(' ');
+  const classes: string = [
+    'button', 
+    `button--${size}`, 
+    `button--${backgroundColor}`, 
+    `button--font-${fontColor}`, 
+    label ? `button--${iconPos}` : "",
+    !label ? `button--${size}-noLabel` : ""
+  ].join(' ');
   
   // Creates a component for the icon
   var IconComponent = iconName && IconsLibrary[iconName] as React.FC<IconProps>;
@@ -95,8 +102,8 @@ export const Button = ({
       className={size === "full-width" ? "button--full-width" : ""}
     >
       <span className={classes}>
-        <span className={`icon--wrapper ${!hasIcon ? "icon--hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>
-        {label}
+        <span className={`icon--wrapper ${!hasIcon ? "hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>
+        <span className={!label ? "hide" : ""}>{label}</span>
       </span>
       
     </button>

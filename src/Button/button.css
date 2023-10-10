@@ -40,6 +40,20 @@ button {
   width: -webkit-fill-available;
 }
 
+.button--sm-noLabel {
+  padding: 14px 16px;
+}
+.button--md-noLabel {
+  padding: 18px 20px;
+}
+.button--lg-noLabel {
+  padding: 22px 24px
+}
+
+.button--xl-noLabel {
+  padding: 26px 28px;
+}
+
 .button--font-black {
   color: #121212;
 }
@@ -85,7 +99,7 @@ button {
   fill: currentColor;
 }
 
-.icon--hide {
+.hide {
   display: none;
 }
 
