@@ -95,6 +95,11 @@ button {
   margin-left: 10px;
 }
 
+.icon--wrapper {
+  position: relative;
+  top: 1px;
+}
+
 .icon--wrapper svg {
   fill: currentColor;
 }
