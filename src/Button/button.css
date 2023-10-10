@@ -73,6 +73,10 @@ button {
   margin-left: 10px;
 }
 
+.icon--wrapper svg {
+  fill: currentColor;
+}
+
 .icon--hide {
   display: none;
 }
