@@ -3,7 +3,7 @@ import type { Meta, StoryObj, StoryFn } from '@storybook/react';
 import { Button } from './Button';
 
 const meta: Meta<typeof Button> = {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     layout: 'centered',
@@ -21,9 +21,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    label: 'Button',
-    backgroundColor: "green",
-    fontColor: "white",
+    label: 'Primary',
+    size: "md",
+    backgroundColor: "white",
+    fontColor: "black",
     hasIcon: false,
   },
 };
@@ -31,22 +32,65 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     ...Primary.args,
+    label: "Secondary",
     backgroundColor: "grey",
+    fontColor: "white",
   },
 };
 
-export const Large: Story = {
+export const CTA: Story = {
+  name: "Call To Action",
   args: {
     ...Primary.args,
-    size: 'lg',
-    backgroundColor: "white",
-    fontColor: "black"
+    label: "CTA",
+    backgroundColor: "green",
+    fontColor: "black",
   },
 };
 
 export const Small: Story = {
   args: {
     ...Primary.args,
+    label: "Small",
     size: 'sm',
   },
 };
+
+export const Medium: Story = {
+  args: {
+    ...Primary.args,
+    label: "Medium",
+    size: 'md',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    ...Primary.args,
+    label: "Large",
+    size: 'lg',
+  },
+};
+
+export const HasIcon: Story = {
+  args: {
+    ...Primary.args,
+    label: "Has Icon",
+    hasIcon: true,
+    iconName: "Download"
+  }
+}
+
+export const IconNoLabel: Story = {
+  name: "Has Icon w/ No Label",
+  args: {
+    ...HasIcon.args,
+    label: "",
+    iconName: "Play",
+    backgroundColor: "green",
+  }
+}
+
+
+
+
