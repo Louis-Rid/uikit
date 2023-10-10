@@ -102,7 +102,7 @@ export const Button = ({
       className={size === "full-width" ? "button--full-width" : ""}
     >
       <span className={classes}>
-        <span className={`icon--wrapper ${!hasIcon ? "hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>
+        <span className={`icon--wrapper${!hasIcon ? ", hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>
         <span className={!label ? "hide" : ""}>{label}</span>
       </span>
       
