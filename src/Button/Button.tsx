@@ -92,6 +92,7 @@ export const Button = ({
       type="button"
       onClick={handleClick}
       {...props}
+      className={size === "full-width" ? "button--full-width" : ""}
     >
       <span className={classes}>
         <span className={`icon--wrapper ${!hasIcon ? "icon--hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>

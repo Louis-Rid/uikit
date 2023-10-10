@@ -3,6 +3,7 @@ button {
   background: transparent;
   padding: 0;
 }
+
 .button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -12,6 +13,7 @@ button {
   display: flex;
   align-items: center;
   line-height: 1;
+  justify-content: center;
 }
 
 .button--sm {
@@ -35,7 +37,7 @@ button {
 .button--full-width {
   font-size: 1rem;
   padding: 11px 20px;
-  width: 100%;
+  width: -webkit-fill-available;
 }
 
 .button--font-black {
