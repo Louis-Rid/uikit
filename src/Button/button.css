@@ -32,6 +32,12 @@ button {
   padding: 13px 28px;
 }
 
+.button--full-width {
+  font-size: 1rem;
+  padding: 11px 20px;
+  width: 100%;
+}
+
 .button--font-black {
   color: #121212;
 }
