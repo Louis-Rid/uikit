@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 button {
   border: none;
   background: transparent;
@@ -70,13 +74,17 @@ button {
   background: #20d760;
 }
 
-.button--grey {
+.button--black {
   background: rgba(0,0,0,.7);
 }
 
 .button--white {
   background: #f5f5f5;
   border: 1px solid #121212;
+}
+
+.button--transparent {
+  background: transparent;
 }
 
 .button--start {
@@ -102,10 +110,6 @@ button {
 
 .icon--wrapper svg {
   fill: currentColor;
-}
-
-.hide {
-  display: none;
 }
 
 
