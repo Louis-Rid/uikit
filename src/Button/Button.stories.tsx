@@ -33,7 +33,7 @@ export const Secondary: Story = {
   args: {
     ...Primary.args,
     label: "Secondary",
-    backgroundColor: "grey",
+    backgroundColor: "black",
     fontColor: "white",
   },
 };
