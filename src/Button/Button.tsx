@@ -5,6 +5,8 @@ import * as IconsLibrary from '../assets/iconComponents/index';
 type Icon =
 | "Download"
 | "Play"
+| "Search"
+| "Home"
 ;
 
 interface IconProps {
