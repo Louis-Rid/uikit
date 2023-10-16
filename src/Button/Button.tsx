@@ -14,7 +14,7 @@ interface ButtonProps {
   /**
    * What background color to use. Optionel
    */
-  backgroundColor?: "white" | "grey" | "green";
+  backgroundColor?: "white" | "black" | "green" | "transparent";
   /**
    * What background color to use. Optionel
    */
@@ -101,11 +101,10 @@ export const Button = ({
       {...props}
       className={size === "full-width" ? "button--full-width" : ""}
     >
-      <span className={classes}>
-        <span className={`icon--wrapper${!hasIcon ? ", hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>
-        <span className={!label ? "hide" : ""}>{label}</span>
-      </span>
-      
+        <span className={classes}>
+          <span className={`icon--wrapper${!hasIcon ? ", hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>
+          <span className={!label ? "hide" : ""}>{label}</span>
+        </span>
     </button>
   );
 };
