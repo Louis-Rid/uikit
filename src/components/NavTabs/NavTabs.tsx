@@ -6,6 +6,8 @@ import { Button } from "../Button/Button";
 type Icon =
 | "Download"
 | "Play"
+| "Home"
+| "Search"
 ;
 
 interface NavTabsProps {

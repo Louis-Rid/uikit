@@ -8,7 +8,7 @@ const meta: Meta<typeof NavTabs> = {
     parameters: {
         layout: 'centered',
       },
-    //tags: ['autodocs'],
+    tags: ['autodocs'],
 }
 
 export default meta;
@@ -18,6 +18,6 @@ export const Primary: Story = {
     args: {
         text: ["home", "search"],
         textColor: "white",
-        icons: ["Download", "Play"]
+        icons: ["Home", "Search"]
     }
 }
