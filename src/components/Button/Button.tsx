@@ -1,10 +1,12 @@
 import React from 'react';
 import './button.css';
-import '../assets/iconComponents/index';
-import * as IconsLibrary from '../assets/iconComponents/index';
+import '../../assets/iconComponents/index';
+import * as IconsLibrary from '../../assets/iconComponents/index';
 type Icon =
 | "Download"
 | "Play"
+| "Search"
+| "Home"
 ;
 
 interface IconProps {
