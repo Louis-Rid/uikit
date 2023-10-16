@@ -3,6 +3,7 @@ button {
   background: transparent;
   padding: 0;
 }
+
 .button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -12,6 +13,7 @@ button {
   display: flex;
   align-items: center;
   line-height: 1;
+  justify-content: center;
 }
 
 .button--sm {
@@ -30,6 +32,26 @@ button {
 .button--xl {
   font-size: 1.25rem;
   padding: 13px 28px;
+}
+
+.button--full-width {
+  font-size: 1rem;
+  padding: 11px 20px;
+  width: -webkit-fill-available;
+}
+
+.button--sm-noLabel {
+  padding: 14px 16px;
+}
+.button--md-noLabel {
+  padding: 18px 20px;
+}
+.button--lg-noLabel {
+  padding: 22px 24px
+}
+
+.button--xl-noLabel {
+  padding: 26px 28px;
 }
 
 .button--font-black {
@@ -73,11 +95,16 @@ button {
   margin-left: 10px;
 }
 
+.icon--wrapper {
+  position: relative;
+  top: 1px;
+}
+
 .icon--wrapper svg {
   fill: currentColor;
 }
 
-.icon--hide {
+.hide {
   display: none;
 }
 
