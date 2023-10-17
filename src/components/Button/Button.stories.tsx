@@ -14,6 +14,14 @@ const meta: Meta<typeof Button> = {
     iconName: {control: "select", if: {arg: "hasIcon"}},
     iconPos: {control: "select", if: { arg: "hasIcon"}}
   },
+  decorators: [
+    (Story: StoryFn) => 
+    (
+      <div className="button--wrapper">
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default meta;

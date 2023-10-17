@@ -1,4 +1,4 @@
-import { Meta, StoryObj} from "@storybook/react";
+import { Meta, StoryObj, StoryFn} from "@storybook/react";
 
 import NavTabs from "./NavTabs";
 
@@ -9,6 +9,13 @@ const meta: Meta<typeof NavTabs> = {
         layout: 'centered',
       },
     tags: ['autodocs'],
+    decorators: [
+        (Story: StoryFn) => (
+            <div className="navTabs--wrapper">
+                <Story />
+            </div>
+        )
+    ]
 }
 
 export default meta;

@@ -20,14 +20,6 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [
-    (Story: StoryFn) => 
-    (
-      <div className="preview--wrapper">
-        <Story />
-      </div>
-    ),
-  ],
 };
 
 export default preview;
