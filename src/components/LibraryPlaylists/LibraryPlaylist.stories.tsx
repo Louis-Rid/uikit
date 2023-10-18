@@ -1,6 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
 import LibraryPlaylist from "./LibraryPlaylists";
-import "/API/apiCredentials.js";
+import { data } from "../../API/apiCredentials.js";
+
+console.log(data);
+var playlist = data.items[0];
 
 const meta: Meta<typeof LibraryPlaylist> = {
     title: "Components/LibraryPlaylist",
@@ -17,7 +20,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        title: "Primary",
-        subText: "subtext",
+        title: playlist.name,
+        subText: playlist.owner.display_name,
+        img: playlist.images[0].url,
     }
 }

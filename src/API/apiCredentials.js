@@ -1,6 +1,7 @@
+import { Buffer } from 'buffer';
 const axios = require('axios').default;
 const qs = require('qs');
-import { Buffer } from 'buffer'
+
 
 
 var client_id = process.env.REACT_APP_SPOTIFY_API_ID;
@@ -37,7 +38,6 @@ const getPlaylists = async () => {
                 'Authorization': `Bearer ${access_token}`,
             }
         })
-        console.log("Playlists", response.data);
         return response.data;
     }
     catch (e) {
@@ -45,4 +45,4 @@ const getPlaylists = async () => {
     }
 }
 
-console.log(getPlaylists());
+export var data = await getPlaylists();
