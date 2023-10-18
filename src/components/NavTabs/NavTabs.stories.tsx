@@ -3,7 +3,7 @@ import { Meta, StoryObj, StoryFn} from "@storybook/react";
 import NavTabs from "./NavTabs";
 
 const meta: Meta<typeof NavTabs> = {
-    title: "NavTabs",
+    title: "Components/NavTabs",
     component: NavTabs,
     parameters: {
         layout: 'centered',
