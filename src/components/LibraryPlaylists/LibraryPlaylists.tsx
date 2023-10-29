@@ -18,6 +18,10 @@ interface LpProps {
      * Text below title
      */
     subText: string;
+    /**
+     * Number of songs in playlist.
+     */
+    numSongs: string;
 }
 
 const LibraryPlaylist = ({
@@ -25,14 +29,15 @@ const LibraryPlaylist = ({
     pinned = false,
     title,
     subText,
+    numSongs,
     ...props
 }: LpProps) => {
     return <>
-    <div>
+    <div className="Lp--wrapper">
         <img src={img}/>
-        <div>
+        <div className="Lp--text">
             <p>{title}</p>
-            <p>{subText}</p>
+            <p className="Lp--subText">{subText} •  {numSongs}</p>
         </div>
     </div>
     </>
