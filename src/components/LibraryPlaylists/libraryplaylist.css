@@ -1,3 +1,36 @@
-div {
+.Lp--wrapper {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    max-width: 404px;
+    width: 100%;
+    max-height: 200px;
     color: white;
+    background: #393939;
+    padding: 12px 8px;
+    border-radius: 8px;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 10px auto;
+}
+
+.Lp--wrapper img {
+    width: -webkit-fill-available;
+    border-radius: 5px;
+}
+
+.Lp--text {
+    max-width: 320px;
+    color: white;
+    margin-left: 10px;
+}
+
+.Lp--text p {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.Lp--subText {
+    font-size: .875rem;
+    color: #b3b3b3;
 }
