@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./libraryplaylist.css";
 
 interface LpProps {
@@ -32,12 +32,19 @@ const LibraryPlaylist = ({
     numSongs,
     ...props
 }: LpProps) => {
+    const [active, setActive] = useState(false);
+    const handleClick = () => {
+        setActive(true);
+    }
+
+    var bgColor = active ? "gray" : "clear";
+
     return <>
-    <div className="Lp--wrapper">
+    <div className={`Lp--wrapper Lp--wrapper-${bgColor}`} onClick={handleClick}>
         <img src={img}/>
         <div className="Lp--text">
             <p>{title}</p>
-            <p className="Lp--subText">{subText} •  {numSongs}</p>
+            <p className="Lp--subText">{subText} • {numSongs}</p>
         </div>
     </div>
     </>
