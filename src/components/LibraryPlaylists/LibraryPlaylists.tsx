@@ -22,6 +22,10 @@ interface LpProps {
      * Number of songs in playlist.
      */
     numSongs: string;
+    /**
+     * If the current playlist is active.
+     */
+    startingActiveState: boolean;
 }
 
 const LibraryPlaylist = ({
@@ -30,9 +34,10 @@ const LibraryPlaylist = ({
     title,
     subText,
     numSongs,
+    startingActiveState = false,
     ...props
 }: LpProps) => {
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(startingActiveState);
     const handleClick = () => {
         setActive(true);
     }

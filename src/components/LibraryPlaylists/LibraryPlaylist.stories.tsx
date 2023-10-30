@@ -24,7 +24,17 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Active: Story = {
+    args: {
+        title: playlist.name,
+        subText: playlist.owner.display_name,
+        numSongs: playlist.tracks.total,
+        img: playlist.images[0].url,
+        startingActiveState: true
+    }
+}
+
+export const NonActive: Story = {
     args: {
         title: playlist.name,
         subText: playlist.owner.display_name,
