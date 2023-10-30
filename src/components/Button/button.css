@@ -16,6 +16,8 @@ button {
   border: none;
   background: transparent;
   padding: 0;
+  width: 100%;
+  max-width: 300px;
 }
 
 .button {
