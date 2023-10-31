@@ -1,9 +1,9 @@
 .preview--wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(18, 18, 18);
-    min-width: 80vw;
-    min-height: 50vh;
-    border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(18, 18, 18);
+  min-width: 80vw;
+  min-height: 50vh;
+  border-radius: 8px;
 }

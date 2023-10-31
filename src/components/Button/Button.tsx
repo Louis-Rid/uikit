@@ -1,16 +1,15 @@
-import React from 'react';
-import './button.css';
-import '../../assets/iconComponents/index';
-import * as IconsLibrary from '../../assets/iconComponents/index';
+import React from "react";
+import "./button.css";
+import "../../assets/iconComponents/index";
+import * as IconsLibrary from "../../assets/iconComponents/index";
 type Icon =
-| "Download"
-| "Play"
-| "Search"
-| "Home"
-| "Library"
-| "Plus"
-| "Arrow"
-;
+  | "Download"
+  | "Play"
+  | "Search"
+  | "Home"
+  | "Library"
+  | "Plus"
+  | "Arrow";
 
 interface IconProps {
   dimensions: number;
@@ -59,7 +58,7 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  size = 'md',
+  size = "md",
   backgroundColor = "green",
   fontColor = "black",
   label,
@@ -70,20 +69,20 @@ export const Button = ({
   handleClick,
   ...props
 }: ButtonProps) => {
-
   // Classes for the span element inside the button
   const classes: string = [
-    'button', 
-    `button--${size}`, 
-    `button--${backgroundColor}`, 
+    "button",
+    `button--${size}`,
+    `button--${backgroundColor}`,
     `button--font-${fontColor}`,
-    `button--label-${labelLoc}`, 
+    `button--label-${labelLoc}`,
     label ? `button--${iconPos}` : "",
-    !label ? `button--${size}-noLabel` : ""
-  ].join(' ');
-  
+    !label ? `button--${size}-noLabel` : "",
+  ].join(" ");
+
   // Creates a component for the icon
-  var IconComponent = iconName && IconsLibrary[iconName] as React.FC<IconProps>;
+  var IconComponent =
+    iconName && (IconsLibrary[iconName] as React.FC<IconProps>);
 
   // Sets Icon size based on button size
   var iconSize;
@@ -113,10 +112,12 @@ export const Button = ({
       {...props}
       className={size === "full-width" ? "button--full-width" : ""}
     >
-        <span className={classes}>
-          <span className={`icon--wrapper${!hasIcon ? ", hide" : ""}`}>{hasIcon && <IconComponent dimensions={iconSize}/>}</span>
-          <span className={!label ? "hide" : ""}>{label}</span>
+      <span className={classes}>
+        <span className={`icon--wrapper${!hasIcon ? ", hide" : ""}`}>
+          {hasIcon && <IconComponent dimensions={iconSize} />}
         </span>
+        <span className={!label ? "hide" : ""}>{label}</span>
+      </span>
     </button>
   );
 };

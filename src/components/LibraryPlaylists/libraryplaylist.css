@@ -1,48 +1,48 @@
 .Lp--wrapper {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    max-width: 404px;
-    max-height: 200px;
-    color: white;
-    padding: 12px 8px;
-    border-radius: 8px;
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  max-width: 404px;
+  max-height: 200px;
+  color: white;
+  padding: 12px 8px;
+  border-radius: 8px;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .Lp--wrapper-gray {
-    background: #232323;
+  background: #232323;
 }
 
 .Lp--wrapper-clear {
-    background: transparent;
+  background: transparent;
 }
 
 .Lp--wrapper:hover {
-    background: #1a1a1a;
+  background: #1a1a1a;
 }
 
 .Lp--wrapper-gray:hover {
-    background: #393939;
+  background: #393939;
 }
 
 .Lp--wrapper img {
-    width: -webkit-fill-available;
-    border-radius: 5px;
+  width: -webkit-fill-available;
+  border-radius: 5px;
 }
 
 .Lp--text {
-    max-width: 320px;
-    color: white;
-    margin-left: 10px;
+  max-width: 320px;
+  color: white;
+  margin-left: 10px;
 }
 
 .Lp--text p {
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .Lp--subText {
-    font-size: .875rem;
-    color: #b3b3b3;
+  font-size: 0.875rem;
+  color: #b3b3b3;
 }

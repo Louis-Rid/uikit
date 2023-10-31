@@ -1,22 +1,21 @@
-import type { Meta, StoryObj, StoryFn } from '@storybook/react';
+import type { Meta, StoryObj, StoryFn } from "@storybook/react";
 
-import { Button } from './Button';
+import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
-    hasIcon: {control: "boolean"},
-    iconName: {control: "select", if: {arg: "hasIcon"}},
-    iconPos: {control: "select", if: { arg: "hasIcon"}}
+    hasIcon: { control: "boolean" },
+    iconName: { control: "select", if: { arg: "hasIcon" } },
+    iconPos: { control: "select", if: { arg: "hasIcon" } },
   },
   decorators: [
-    (Story: StoryFn) => 
-    (
+    (Story: StoryFn) => (
       <div className="button--wrapper">
         <Story />
       </div>
@@ -29,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    label: 'Primary',
+    label: "Primary",
     size: "md",
     backgroundColor: "white",
     fontColor: "black",
@@ -60,7 +59,7 @@ export const Small: Story = {
   args: {
     ...Primary.args,
     label: "Small",
-    size: 'sm',
+    size: "sm",
   },
 };
 
@@ -68,7 +67,7 @@ export const Medium: Story = {
   args: {
     ...Primary.args,
     label: "Medium",
-    size: 'md',
+    size: "md",
   },
 };
 
@@ -76,7 +75,7 @@ export const Large: Story = {
   args: {
     ...Primary.args,
     label: "Large",
-    size: 'lg',
+    size: "lg",
   },
 };
 
@@ -85,9 +84,9 @@ export const HasIcon: Story = {
     ...Primary.args,
     label: "Has Icon",
     hasIcon: true,
-    iconName: "Download"
-  }
-}
+    iconName: "Download",
+  },
+};
 
 export const IconNoLabel: Story = {
   name: "Has Icon w/ No Label",
@@ -96,9 +95,5 @@ export const IconNoLabel: Story = {
     label: "",
     iconName: "Play",
     backgroundColor: "green",
-  }
-}
-
-
-
-
+  },
+};

@@ -21,7 +21,7 @@ button {
 }
 
 .button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
   border-radius: 3em;
@@ -32,7 +32,7 @@ button {
 }
 
 .button--sm {
-  font-size: .875rem;
+  font-size: 0.875rem;
   padding: 10px 16px;
 }
 .button--md {
@@ -82,7 +82,7 @@ button {
 
 .button--font-white {
   color: #b3b3b3;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .button--font-green {
@@ -94,7 +94,7 @@ button {
 }
 
 .button--black {
-  background: rgba(0,0,0,.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .button--white {
@@ -139,9 +139,6 @@ button {
   justify-content: center;
 }
 
-.button--label-end{
+.button--label-end {
   justify-content: end;
 }
-
-
-
