@@ -7,6 +7,9 @@ type Icon =
 | "Play"
 | "Search"
 | "Home"
+| "Library"
+| "Plus"
+| "Arrow"
 ;
 
 interface IconProps {
