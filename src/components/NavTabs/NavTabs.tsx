@@ -34,7 +34,7 @@ const NavTabs = ({
 
     return <>
         {text.map((val, index) => {
-            return <Button label={val} backgroundColor="transparent" fontColor={textColor} hasIcon={true} iconName={icons[index]}/>
+            return <Button label={val} backgroundColor="transparent" fontColor={textColor} hasIcon={true} iconName={icons[index]} labelLoc="start"/>
         })}
     </>
 }

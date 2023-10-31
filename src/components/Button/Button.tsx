@@ -42,6 +42,11 @@ interface ButtonProps {
    */
   label?: string;
   /**
+   * Location of label. Optionel
+   */
+  labelLoc?: "start" | "center" | "end";
+  /**
+  /**
    * Click handler. Optionel
    */
   handleClick?: () => void;
@@ -55,6 +60,7 @@ export const Button = ({
   backgroundColor = "green",
   fontColor = "black",
   label,
+  labelLoc = "center",
   hasIcon = false,
   iconPos = "start",
   iconName = "Download",
@@ -67,7 +73,8 @@ export const Button = ({
     'button', 
     `button--${size}`, 
     `button--${backgroundColor}`, 
-    `button--font-${fontColor}`, 
+    `button--font-${fontColor}`,
+    `button--label-${labelLoc}`, 
     label ? `button--${iconPos}` : "",
     !label ? `button--${size}-noLabel` : ""
   ].join(' ');

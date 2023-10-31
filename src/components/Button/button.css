@@ -29,7 +29,6 @@ button {
   display: flex;
   align-items: center;
   line-height: 1;
-  justify-content: center;
 }
 
 .button--sm {
@@ -122,6 +121,18 @@ button {
 
 .icon--wrapper svg {
   fill: currentColor;
+}
+
+.button--label-start {
+  justify-content: start;
+}
+
+.button--label-center {
+  justify-content: center;
+}
+
+.button--label-end{
+  justify-content: end;
 }
 
 
