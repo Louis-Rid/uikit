@@ -9,7 +9,8 @@ import "./sideBar.css";
 function SideBar() {
     var playlists = data.items;
 
-    return <>
+    return (
+    <div className="sideBar--wrapper">
         {/* Home and Search tabs */}
         <div className="sideBar--NavTabs">
             <NavTabs text={["Home", "Search"]} textColor="white" icons={["Home", "Search"]}/>
@@ -17,8 +18,8 @@ function SideBar() {
         
 
         {/* Library */}
-        <div className="sideBar--LibraryPlaylist">
-            <div>
+        <div className="sideBar--Library">
+            <div className="sideBar--libraryHeader">
             <Button
                 backgroundColor="transparent"
                 fontColor="white"
@@ -62,7 +63,8 @@ function SideBar() {
                 })
             }
         </div>
-    </>
+    </div>
+    )
 }
 
 export default SideBar;
