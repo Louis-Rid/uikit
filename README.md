@@ -6,6 +6,8 @@ This project was based on Spotify's UI.
 
 In the project directory, you can run:
 
-### `yarn storybook`
+```
+yarn storybook
+```
 
 Runs the app in the development mode.
